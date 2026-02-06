@@ -18,87 +18,70 @@ Real-world test: Building a GitHub Dashboard
 
 ## 🎯 The Challenge
 
-**Task**: Build a Next.js GitHub dashboard
+Build a GitHub dashboard
 
-**Two Tools Tested:**
-- 🟦 **Cursor** (Free Plan)
-- 🟧 **OpenHands** (CLI)
+**Same task, two tools**
 
-**What We Measured:**
-- Setup & UX
-- Cost & speed
-- Success rate
+---
+
+## The Test
+
+🟦 **Cursor** (Free Plan)
+🟧 **OpenHands** (CLI)
 
 ---
 
 ## 🚪 Sign-Up
 
-| Tool | Experience | Rating |
-|------|------------|--------|
-| **Cursor** | GitHub OAuth, phone verify | 9/10 |
-| **OpenHands** | CLI install, GitHub token | 8/10 |
+**Cursor**: GitHub OAuth · 9/10
 
-Both are easy to get started
+**OpenHands**: CLI install · 8/10
+
+Both easy
 
 ---
 
 ## 🎨 User Experience
 
-### Cursor (Free Plan)
-
-⚠️ **Constant approvals required**
-- Tiny font for permission requests
+**Cursor**: Constant approvals
+- Tiny fonts
 - "Very annoying"
-- Questions get queued
 
-### OpenHands
-
-✅ **Risk-based approvals**
-- Low/Medium/High levels
-- **Auto-yes option**
+**OpenHands**: Auto-approve option
+- Clear risk levels
 - Better control
 
 ---
 
-## 👀 Visual Feedback
+## 👀 Feedback
 
-### Cursor
-❌ **Waited 6 min with no updates**
-- Hard to tell if stuck
-- Minimal progress shown
+**Cursor**: Waited 6 min, no updates
 
-### OpenHands
-✅ **Clear progress**
-- Shows current task
-- Terminal output visible
+**OpenHands**: Clear progress shown
 
 ---
 
 ## ⏱️ Speed
 
-| Phase | Cursor | OpenHands |
-|-------|--------|-----------|
-| First run | ✅ Worked | ❌ Failed |
-| Fixes | 3 tries | Had to pivot |
-| Result | ✅ Success | ✅ Success |
+**Cursor**: ✅ Worked first try
+3 iterations to fix
 
-**Cursor**: Slow but steady
-**OpenHands**: Failed first, then worked
+**OpenHands**: ❌ Failed first
+Had to pivot
+
+Both eventually worked
 
 ---
 
-## 🐛 Error Handling
+## 🐛 Errors
 
-### Cursor
-- ✅ Worked locally first time
-- Deprecated dependencies
-- 4 security vulnerabilities
-- Fixed after 3 iterations
+**Cursor**: 
+- Worked locally
+- 4 security issues
 
-### OpenHands  
-- ❌ Next.js failed locally
-- Pivoted to vanilla JS
-- Second attempt worked
+**OpenHands**: 
+- Next.js failed
+- Switched to vanilla JS
 
 ---
 
@@ -106,153 +89,116 @@ Both are easy to get started
 
 ## 💰 Cost
 
-### Cursor: $1.00
-- **Locked code at limit** 🔒
-- Can't commit without upgrade
+**Cursor**: $1
+🔒 Locked code at limit
 
-### OpenHands: $3.60
-- 3.6x more expensive
-- No artificial limits
-- Full control
+**OpenHands**: $3.60
+No limits
 
 ---
 
-## 🆚 Quick Comparison
+## 🆚 Comparison
 
-| Feature | Cursor | OpenHands |
-|---------|--------|-----------|
-| **IDE** | ✅ Native | ❌ CLI |
-| **Auto-approve** | ❌ | ✅ |
-| **GitHub** | Limited | ✅ Full |
-| **Feedback** | ⚠️ Poor | ✅ Good |
-| **First try** | ✅ | ❌ |
+**IDE**: Cursor ✅ · OpenHands ❌
+
+**Auto-approve**: Cursor ❌ · OpenHands ✅
+
+**GitHub**: Cursor ⚠️ · OpenHands ✅
+
+**First try**: Cursor ✅ · OpenHands ❌
 
 ---
 
-## ✅ Cursor Strengths
+## ✅ Cursor Pros
 
-- Worked locally first time
-- Lower cost ($1)
+- Worked first time
 - IDE integration
-- Eventually completes tasks
-
-**Best for**: IDE users who can babysit
+- Lower cost
 
 ---
 
-## ❌ Cursor Weaknesses
+## ❌ Cursor Cons
 
-- Constant approvals needed
-- Tiny fonts
+- Constant approvals
 - Poor feedback
-- **$1 limit locks code** 🔒
-- Forces upgrade to commit
+- 🔒 **Code locked at $1**
 
 ---
 
-## ✅ OpenHands Strengths
+## ✅ OpenHands Pros
 
-- Better GitHub integration
-- Auto-approve option
-- Clear risk levels
-- No code locks
+- Auto-approve
+- GitHub integration
 - Good feedback
 
-**Best for**: CLI users who want autonomy
-
 ---
 
-## ❌ OpenHands Weaknesses
+## ❌ OpenHands Cons
 
+- Failed first try
 - Higher cost ($3.60)
-- Failed first attempt
-- Had to pivot tech stack
-- CLI-only
-- Steeper learning curve
+- CLI only
 
 ---
 
-## 📊 Final Scorecard
+## 📊 Scores
 
-| Category | Cursor | OpenHands |
-|----------|--------|-----------|
-| Sign-up | 9/10 | 8/10 |
-| UX/Feedback | 4/10 | 7/10 |
-| Speed | 5/10 | 7/10 |
-| Reliability | 8/10 | 6/10 |
-| GitHub | 5/10 | 9/10 |
-| **Overall** | **6.3** | **7.2** |
+**Cursor**: 6.3/10
+**OpenHands**: 7.2/10
 
-**Winner: OpenHands** (with caveats)
+Winner: OpenHands
 
 ---
 
-## 💭 User's Verdict
+## 💭 User Quote
 
-> "Cursor requires **a lot of tending to**"
+> "Cursor requires **a lot of tending**"
 
-> "It **locked my code** at the $1 limit"
+> "**Locked my code** at $1"
 
-> "Cursor was slow, OpenHands was $3.6"
-
-> "Wish OpenHands had done better. **Failed first try**"
+> "OpenHands **failed first try**"
 
 ---
 
-## 🤔 Which Should You Choose?
+## 🤔 Choose Cursor if:
 
-**Choose Cursor if:**
-- Want IDE integration
+- Want IDE
 - Don't mind babysitting
-- Willing to pay for full version
+- Willing to upgrade
 
-**Choose OpenHands if:**
-- Prefer CLI workflows
-- Want full GitHub control
+---
+
+## 🤔 Choose OpenHands if:
+
+- Want CLI
+- Full GitHub control
 - Value autonomy
 
 ---
 
-## 🎯 Key Takeaways
+## 🎯 Takeaways
 
-1. **Free isn't free** - Cursor locks code at $1
-2. **UX matters** - Approvals kill flow
-3. **Both completed the task**
-4. **Different tradeoffs** - Cost vs control
-5. **Neither is perfect**
+**Free isn't free**
+Cursor locks at $1
+
+**Both work**
+Different tradeoffs
+
+**Neither is perfect**
 
 ---
 
 ## 📈 Real Cost
 
-### Cursor
-$1 + your time + frustration + upgrade
+**Cursor**: $1 + time + upgrade
 
-### OpenHands
-$3.60 all-in, no hidden costs
-
----
-
-## 🔮 What They Need to Fix
-
-### Cursor
-- Better feedback
-- Remove code locking
-- Larger fonts
-- Less approvals
-
-### OpenHands
-- Better first-try success
-- IDE integration
-- Cost optimization
+**OpenHands**: $3.60 all-in
 
 ---
 
 <!-- _class: center -->
 
-## 💡 Questions?
-
-Same project · Different tools · Real results
+## Questions?
 
 ---
 
@@ -260,7 +206,5 @@ Same project · Different tools · Real results
 <!-- _paginate: false -->
 
 # Thank You
-
-Built with OpenHands · Your brand theme
 
 **Ready to compare?** 🚀
