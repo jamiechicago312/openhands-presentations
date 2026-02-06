@@ -1,0 +1,83 @@
+name: Build Presentation
+
+on:
+  push:
+    paths:
+      - 'slides.md'
+      - 'themes/**'
+      - '.github/workflows/build-slides.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install Marp CLI
+        run: npm install -g @marp-team/marp-cli
+        
+      - name: Check if slides.md exists
+        id: check_slides
+        run: |
+          if [ -f "slides.md" ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "⚠️ No slides.md found in this branch"
+          fi
+          
+      - name: Build PPTX
+        if: steps.check_slides.outputs.exists == 'true'
+        run: |
+          marp slides.md \
+            --theme-set themes/ \
+            --allow-local-files \
+            --pptx \
+            -o slides.pptx
+            
+      - name: Build PDF
+        if: steps.check_slides.outputs.exists == 'true'
+        run: |
+          marp slides.md \
+            --theme-set themes/ \
+            --allow-local-files \
+            --pdf \
+            -o slides.pdf
+            
+      - name: Build HTML
+        if: steps.check_slides.outputs.exists == 'true'
+        run: |
+          marp slides.md \
+            --theme-set themes/ \
+            --allow-local-files \
+            --html \
+            -o slides.html
+            
+      - name: Upload artifacts
+        if: steps.check_slides.outputs.exists == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: presentation-output
+          path: |
+            slides.pptx
+            slides.pdf
+            slides.html
+          retention-days: 90
+          
+      - name: Add build status comment
+        if: steps.check_slides.outputs.exists == 'true'
+        run: |
+          echo "✅ Presentation built successfully!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📦 Download artifacts above to get:" >> $GITHUB_STEP_SUMMARY
+          echo "- slides.pptx (PowerPoint)" >> $GITHUB_STEP_SUMMARY
+          echo "- slides.pdf (PDF)" >> $GITHUB_STEP_SUMMARY
+          echo "- slides.html (Web preview)" >> $GITHUB_STEP_SUMMARY

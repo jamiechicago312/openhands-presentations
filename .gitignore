@@ -1,0 +1,39 @@
+# Build outputs
+*.pptx
+*.pdf
+*.html
+slides.pptx
+slides.pdf
+slides.html
+
+# Node modules (if running Marp locally)
+node_modules/
+package-lock.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
+
+# Keep template outputs for reference (optional)
+# !template.pptx
+# !template.pdf
