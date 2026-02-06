@@ -4,8 +4,6 @@
 
 /* @theme minimal */
 
-@import 'default';
-
 :root {
   --color-primary: #000000;
   --color-secondary: #333333;

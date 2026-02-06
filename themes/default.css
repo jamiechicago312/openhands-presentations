@@ -7,8 +7,6 @@
 
 /* @theme default */
 
-@import 'default';
-
 :root {
   /* Color Palette - Update these from your PPTX */
   --color-primary: #2563eb;      /* Primary brand color */
