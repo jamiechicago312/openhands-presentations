@@ -1,0 +1,302 @@
+/*
+ * OpenHands Presentation Theme
+ * 
+ * Extracted from your PowerPoint template and refined
+ * Typography: Inter font family  
+ * Colors: Modern minimalist with blue accents
+ * Backgrounds: Subtle geometric patterns on beige/cream
+ */
+
+/* @theme extracted */
+
+@import 'default';
+
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Brand Color Palette */
+  --color-primary: #212121;        /* Near black for headings */
+  --color-secondary: #4285f4;      /* Google blue accent */
+  --color-background: #f5f5f0;     /* Warm off-white/beige */
+  --color-text: #212121;           /* Dark text for readability */
+  --color-text-light: #595959;     /* Medium gray for secondary text */
+  --color-accent: #4285f4;         /* Blue for highlights and links */
+  
+  /* Typography - Inter font family */
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Courier New', monospace;
+  
+  /* Font Sizes - Accessibility Best Practices */
+  --font-size-title: 56pt;         /* Large titles */
+  --font-size-heading: 38pt;       /* Section headings */
+  --font-size-subheading: 32pt;    /* Subheadings */
+  --font-size-body: 26pt;          /* Body text (increased for readability) */
+  --font-size-small: 20pt;         /* Small text/captions */
+}
+
+section {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 70px 90px;
+  
+  /* Default background with subtle geometric pattern */
+  background-image: url('./backgrounds/image15.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Title Slide Style */
+section.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+section.title h1 {
+  font-size: 68pt;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.3em;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+section.title h2 {
+  font-size: 36pt;
+  font-weight: 400;
+  color: var(--color-text-light);
+  margin-top: 0;
+  line-height: 1.3;
+}
+
+/* Headings */
+h1 {
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.6em;
+  margin-top: 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: var(--font-size-heading);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.7em;
+  margin-top: 0;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: var(--font-size-subheading);
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin-bottom: 0.6em;
+  line-height: 1.3;
+}
+
+/* Text Elements */
+p {
+  margin-bottom: 1em;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+em {
+  color: var(--color-secondary);
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Links */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-accent);
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Lists */
+ul, ol {
+  margin-left: 1.2em;
+  margin-bottom: 1em;
+}
+
+li {
+  margin-bottom: 0.6em;
+  line-height: 1.6;
+}
+
+ul > li::marker {
+  color: var(--color-secondary);
+}
+
+/* Code Blocks */
+code {
+  font-family: var(--font-family-mono);
+  background-color: rgba(66, 133, 244, 0.08);
+  color: var(--color-primary);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: 1.5em;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 20pt;
+  line-height: 1.6;
+  margin: 1em 0;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5em 0;
+  font-size: 22pt;
+}
+
+th {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.8em 1em;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: 0.8em 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--color-accent);
+  padding-left: 1.5em;
+  margin: 1.5em 0;
+  font-style: italic;
+  color: var(--color-text-light);
+  font-size: 24pt;
+}
+
+/* Two Column Layout */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3em;
+  align-items: start;
+}
+
+/* Three Column Layout */
+.columns-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2em;
+}
+
+/* Highlight Boxes */
+.highlight {
+  background-color: rgba(66, 133, 244, 0.08);
+  border-left: 4px solid var(--color-accent);
+  padding: 1em 1.5em;
+  border-radius: 4px;
+  margin: 1.5em 0;
+}
+
+.highlight.info {
+  background-color: rgba(66, 133, 244, 0.08);
+  border-left-color: #4285f4;
+}
+
+.highlight.success {
+  background-color: rgba(52, 168, 83, 0.08);
+  border-left-color: #34a853;
+}
+
+.highlight.warning {
+  background-color: rgba(251, 188, 4, 0.08);
+  border-left-color: #fbbc04;
+}
+
+.highlight.danger {
+  background-color: rgba(234, 67, 53, 0.08);
+  border-left-color: #ea4335;
+}
+
+/* Page Numbers */
+section::after {
+  font-size: var(--font-size-small);
+  color: var(--color-text-light);
+  font-weight: 400;
+}
+
+/* Alternative Background - Yellow */
+section.bg-yellow {
+  background-image: url('./backgrounds/image20.png');
+}
+
+/* Alternative Background - Plain */
+section.bg-plain {
+  background-image: none;
+  background-color: var(--color-background);
+}
+
+/* Center Content */
+section.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-large {
+  font-size: 32pt;
+}
+
+.text-small {
+  font-size: var(--font-size-small);
+  color: var(--color-text-light);
+}
+
+.text-muted {
+  color: var(--color-text-light);
+}
